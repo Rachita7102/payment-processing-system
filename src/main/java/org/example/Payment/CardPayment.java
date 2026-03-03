@@ -2,14 +2,9 @@ package org.example.Payment;
 
 import org.example.Order.Order;
 
-public class CardPayment implements PaymentChannel, PaymentConfirmationService {
+public class CardPayment implements PaymentChannel {
     @Override
     public void processPayment(Order order) {
-
-    }
-
-    @Override
-    public void confirmPayment(Order order) {
-
+        System.out.println("Processing card payment for order: " + order.getOrderId());
     }
 }
